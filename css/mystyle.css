@@ -1,0 +1,333 @@
+:root {
+    --main-padding: 100px;
+    --mobile-padding: 50px;
+    --main-shadow:  0 0 10px 0px #b8b8b8;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    Font-size: 18px;
+}
+/* font-family: 'Poppins', sans-serif; */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+header {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-color: rgb(178, 212, 255);
+}
+
+@media (max-width: 767px) {
+    header {
+        background-image: url(../images/bg-hero-mobile.svg);
+        padding-top: var(--mobile-padding);
+        padding-bottom: var(--mobile-padding);
+    }
+}
+
+header .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+header .head .logo img {
+    max-width: 100%;
+}
+
+header .head .try {
+    background: white;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    box-shadow: var(--main-shadow);
+    cursor: pointer;
+}
+
+header .land {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    header .land {
+        flex-direction: column;
+        text-align: center;
+    }
+    header .land .content {
+        margin-bottom: 50px;
+    }
+    header .land .content .start {
+        margin: 0 auto;
+    }
+    header .head .logo {
+        width: 130px;
+    }
+    header .head .try  {
+        padding: 15px 30px;
+    }
+}
+
+header .land .content {
+    flex-basis: 40%;
+}
+
+header .land .content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    header .land .content h2 {
+        font-size: 34px;
+    }
+}
+
+header .land .content p {
+    line-height: 2;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+header .land .content .start {
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+    padding: 15px 50px;
+    width: fit-content;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .land .content .start:hover {
+    background-color:   hsl(322deg, 100%, 66%, 60%);
+}
+
+header .land .img {
+    flex-basis: 50%;
+}
+
+header .land .img img {
+    max-width: 100%;
+}
+
+section {
+    padding-top: var(--main-padding);
+    padding-bottom: calc(var(--main-padding) + 100px);
+}
+
+section .container {
+    position: relative;
+}
+
+section .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px 20px 20px 50px;
+    box-shadow: var(--main-shadow);
+    border-radius: 15px;
+}
+
+@media (max-width: 767px) {
+    section .box {
+        flex-direction: column-reverse;
+        padding: 35px;
+        text-align: center;
+    }
+}
+
+section .box .text {
+    flex-basis: 50%;
+}
+
+section .box .text h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+}
+
+section .box .text p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+section .box .img {
+    flex-basis: 40%;
+}
+
+section .box .img img {
+    max-width: 100%;
+}
+
+section .ready {
+    box-shadow: var(--main-shadow);
+    padding: 30px 60px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 15px;
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -310px;
+}
+
+section .ready h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+section .ready .start {
+    background-color: hsl(322, 100%, 66%);
+    color: white;
+    padding: 20px 60px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: var(--main-shadow);
+    cursor: pointer;
+    transition: 0.3s;
+}
+section .ready .start:hover {
+    background-color: hsl(322deg, 100%, 66%, 60%);
+}
+
+
+
+@media (max-width: 767px) {
+    section .ready {
+        padding: 35px;
+    }
+    section .ready h2 {
+        font-size: 16px;
+    }
+    section .ready .start {
+        font-size: 15px;
+    }
+}
+
+footer {
+    padding-top: calc(var(--main-padding) + 50px);
+    padding-bottom: var(--main-padding);
+    background-color:  hsl(192, 100%, 9%);
+    color: white;
+}
+
+footer .logo {
+    background-color: white;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    footer .content {
+        flex-direction: column;
+    }
+    footer .content .one,
+    footer .content .three,
+    footer .content .four {
+        margin-bottom: 30px;
+    }
+    footer .content .four {
+        align-self: center;
+    }
+}
+
+footer .content .one {
+    flex-basis: 40%;
+}
+
+footer .content .one .contact {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+footer .content .one .contact i {
+    margin-right: 20px;
+}
+
+footer .content .one .contact .address {
+    line-height: 1.7;
+}
+
+footer .content .two div,
+footer .content .three div {
+    margin-bottom: 20px;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .content .two div:hover,
+footer .content .three div:hover {
+    border-bottom-color: white;
+}
+
+footer .content .four i {
+    margin-right: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .content .four i:hover {
+    color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+footer .copy-right {
+    text-align: center;
+    font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    footer .copy-right {
+        text-align: right;
+    }
+}
